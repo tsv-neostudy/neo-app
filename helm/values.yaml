@@ -1,0 +1,19 @@
+pod:
+# pod replicas count, by default it's 1
+  replicas: 1
+  annotations: {}
+  labels: {}
+
+app:
+  repository: tsv2k
+  imageName: "hello-world"
+# by default tag is "latest"
+  tag: "latest"
+  port: 8080
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 8080
+  nodePort: 30080
+  

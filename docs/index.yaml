@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  neo-app:
+  - apiVersion: v2
+    appVersion: 0.1.2
+    created: "2024-12-17T18:59:57.912996716+03:00"
+    description: Application installation prepared for Neostudy Project
+    digest: 93d621390091805a42d740d3fb0534f0fb86184f3aaf3162c943cfc6f714dbaf
+    name: neo-app
+    type: application
+    urls:
+    - https://tsv-neostudy.github.io/neoApp/neo-app-0.1.1.tgz
+    version: 0.1.1
+generated: "2024-12-17T18:59:57.912420556+03:00"

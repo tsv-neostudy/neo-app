@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}{{ if ne .Values.app.tag "latest" }}{{ .Values.app.tag }}{{ end }}-deployment 
+  #name: {{ .Release.Name }}-deployment 
+spec:
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  replicas: {{ .Values.pod.replicas | default "1" }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+      {{- include "appImage" . | indent 8 }}
+
