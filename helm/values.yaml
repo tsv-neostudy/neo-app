@@ -1,6 +1,6 @@
 pod:
 # pod replicas count, by default it's 1
-  replicas: 1
+  replicas: 2
   annotations: {}
   labels: {}
 
